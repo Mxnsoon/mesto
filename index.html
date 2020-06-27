@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="pages/index.css">
+  <meta name="author" content="Sergey Stepanov">
+  <title>Mesto</title>
+  </head>
+  <body class="root">
+      <div class="page">
+          <header class="header">
+              <img src="./images/logo.png" class="header__logo" alt="лого">
+          </header>
+          <section class="profile">
+            <img src="./images/kusto.png" alt="Жак-Ив Кусто" class="profile__image">
+            <div class="profile__block">
+              <div class="profile__all">
+                <h1 class="profile__name">Жак-Ив Кусто</h1>
+                <p class="profile__activity">Исследователь океана</p>
+              </div>
+              <button class="profile__edit"></button>
+            </div>
+            <button class="profile__add"></button>
+          </section>
+          <section class="element">
+              <ul class="element__group">
+              <li class="element__rectangle">
+                  <img src="./images/element1.png" class="element__image" alt="Карачаевск">
+                  <div class="element__other">
+                  <h2 class="element__text">Карачаевск</h2>
+                  <button class="element__like"></button>
+              </div>
+              </li>
+              <li class="element__rectangle">
+                  <img src="./images/element2.png" class="element__image" alt="Гора Эльбрус">
+                  <div class="element__other">
+                  <h2 class="element__text">Гора Эльбрус</h2>
+                  <button class="element__like"></button>
+              </div>
+              </li>
+              <li class="element__rectangle">
+                  <img src="./images/element3.png" class="element__image" alt="Домбай">
+                  <div class="element__other">
+                  <p class="element__text">Домбай</p>
+                  <button class="element__like"></button>
+              </div>
+              </li>
+              <li class="element__rectangle">
+                <img src="./images/element2.png" class="element__image" alt="Гора Эльбрус">
+                <div class="element__other">
+                <p class="element__text">Гора Эльбрус</p>
+                <button class="element__like"></button>
+            </div>
+            </li>
+            <li class="element__rectangle">
+                <img src="./images/element3.png" class="element__image" alt="Домбай">
+                <div class="element__other">
+                <p class="element__text">Домбай</p>
+                <button class="element__like"></button>
+            </div>
+            </li>
+            <li class="element__rectangle">
+                <img src="./images/element1.png" class="element__image" alt='Карачаево-Черкеск'>
+                <div class="element__other">
+                <p class="element__text">Карачаево-Черкеск</p>
+                <button class="element__like"></button>
+            </div>
+            </li>
+        </ul>
+          </section>
+          <div class="popup">
+            <div class="popup__block">
+              <h3 class="popup__title">Редактировать профиль</h3>
+              <form class="popup__form" name="editform">
+                <fieldset class="popup__field">
+                  <input class="popup__text popup__text_type_name" type="text" name="name">
+                  <input class="popup__text popup__text_type_job" type="text" name="job">
+                </fieldset>
+                <button type="submit" class="popup__save">Сохранить</button>
+              </form>
+              <button class="popup__close"></button>
+            </div>
+          </div>
+          <footer class="footer">
+              <p class="footer__text">© 2020 Mesto Russia</p>
+          </footer>
+      </div>
+      <script src="scripts/script.js"></script>
+  </body>
+  </html>
