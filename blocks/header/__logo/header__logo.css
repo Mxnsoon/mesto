@@ -4,6 +4,11 @@
     margin-top: 45px;
     margin-bottom: 40.6px;
 }
+@media (max-width:940px) {
+    .header__logo{
+        margin-left: 27px;
+    }
+}
 @media (max-width: 500px){
     .header__logo {
         max-width: 104px;

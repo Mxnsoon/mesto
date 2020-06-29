@@ -1,9 +1,8 @@
 .profile__add {
-    position: absolute;
     background-image: url(../../../images/Vector2.svg);
     background-repeat: no-repeat;
     background-position: center;
-    right: 0;
+    margin-left: 246px;
     width: 150px;
     height: 50px;
     background-color: #000000;
@@ -14,16 +13,17 @@
     opacity: .6;
   }
   
-  @media (max-width: 900px) {
+  @media (max-width: 899px) {
     .profile__add {    
-      width: 140px;    
+      width: 140px;
+      margin-left: 150px;    
     }
   }
   
-  @media (max-width: 600px) {
+  @media (max-width: 685px) {
     .profile__add {
-      position: unset;
       width: 282px;
-      background-size: 5.6%;
+      margin-left: 19px;
+      margin-right: 19px;
     }
   }

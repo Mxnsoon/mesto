@@ -13,9 +13,18 @@
     max-width: 882px;
     margin: 0 auto;
     margin-bottom: 50px;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
 
 }
-@media (max-width: 600px) {
+@media (max-width: 882px){
+  .profile {
+    max-width: 685px;
+  }
+}
+
+@media (max-width: 685px) {
     .profile {
       margin-left: 27px;
       margin-right: 27px;
