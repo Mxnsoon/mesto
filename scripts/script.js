@@ -1,10 +1,9 @@
-const popup = document.querySelector('.popup');
+const profilePopup = document.querySelector('.popup');
 const popupOpenButton = document.querySelector('.profile__edit');
 const closeButton = document.querySelector('.popup__close');
 const formElement = document.querySelector('.popup__content');
 const nameInput = document.querySelector('.popup__name');
 const jobInput = document.querySelector('.popup__text');
-const cardsList = document.querySelector('.element__group');
 const popupImageOpenButton = document.querySelector('.profile__button-add');
 const profName = document.querySelector('.profile__name');
 const profText = document.querySelector('.profile__text');
@@ -15,16 +14,19 @@ const popupImg = document.querySelector('.popup-img');
 const popupImgText = popupImg.querySelector('.popup-img__name');
 const popupImgFoto = popupImg.querySelector('.popup-img__image');
 const popupImgCloseButton = popupImg.querySelector('.popup-img__close');
+const addPlaceToForm = document.querySelector('.popup-mesto__content');
+const placeName = addPlaceToForm.querySelector('.popup-mesto__name');
+const placeText = addPlaceToForm.querySelector('.popup-mesto__text');
 
 
 
 const popupToggle = function (event) {
-  if (!popup.classList.contains('popup__opened')){
+  if (!profilePopup.classList.contains('popup__opened')){
     nameInput.value = profName.textContent;
     jobInput.value = profText.textContent;
 
   }
-  popup.classList.toggle('popup__opened');
+  profilePopup.classList.toggle('popup__opened');
 };
 
 function formSubmitHandler(evt){
@@ -41,7 +43,7 @@ formElement.addEventListener('submit', formSubmitHandler);
 popupOpenButton.addEventListener('click', popupToggle);
 closeButton.addEventListener('click', popupToggle);
 
-let popupImageToggle = function() {
+const popupImageToggle = function() {
   if (popupImage.classList.contains('popup-mesto__opened')){
 
   }
@@ -50,6 +52,8 @@ let popupImageToggle = function() {
 
 popupImageOpenButton.addEventListener('click', popupImageToggle);
 popupImageCloseButton.addEventListener('click', popupImageToggle);
+
+
 
 
 const initialCards = [
@@ -80,7 +84,6 @@ const initialCards = [
 ];
 
 const placesContainer = document.querySelector('.element__list');
-const addPlaceToForm = document.querySelector('.popup-mesto__content');
 
 const addItemToContainer = (name, link) => {
   const placeElement = document.querySelector ('.element-template').content.cloneNode(true);
@@ -89,41 +92,41 @@ const addItemToContainer = (name, link) => {
   placeElement.querySelector('.element__like').addEventListener('click', evt => {
     evt.target.classList.toggle('element__like-active');
   });
-  placeElement.querySelector('.element__delete').addEventListener('click', evt => {
-    const place = evt.target.closest('.element__group');
-    place.remove();
-  })
-  placesContainer.prepend(placeElement);
-}
-
-initialCards.forEach(cards => {
-  addItemToContainer(cards.name, cards.link)
-});
-
-addPlaceToForm.addEventListener('submit', evt => {
-  evt.preventDefault()
-  const placeElement = addPlaceToForm.querySelector('.popup-mesto__name').value;
-  const placeElement1 = addPlaceToForm.querySelector('.popup-mesto__text').value;
-  addItemToContainer(placeElement, placeElement1);
-  popupImageToggle();
-  addPlaceToForm.reset();
-});
-
-const popupImgToggle = function () {
-  popupImg.classList.toggle('popup__opened');
-}
-
-const figureFoto = placesContainer.querySelectorAll('.element__image');
-
-figureFoto.forEach((activeFoto) => {
-  activeFoto.addEventListener('click', (evt) => {
+  placeElement.querySelector('.element__image').addEventListener('click', evt => {
     const figureFotoTarget = evt.target;
     popupImg.classList.toggle('popup__opened');
     popupImgFoto.src = figureFotoTarget.src;
     const figureCard = figureFotoTarget.closest('.element__group');
     popupImgText.textContent = figureCard.querySelector('.element__text').textContent;
   })
-})
+  placeElement.querySelector('.element__delete').addEventListener('click', evt => {
+    const place = evt.target.closest('.element__group');
+    place.remove();
+  })
+
+  placesContainer.prepend(placeElement);
+}
+
+initialCards.forEach(card => {
+  addItemToContainer(card.name, card.link)
+});
+
+addPlaceToForm.addEventListener('submit', evt => {
+  evt.preventDefault()
+  const name = placeName.value;
+  const text = placeText.value;
+  addPlaceToForm.reset();
+  addItemToContainer(name, text);
+  popupImageToggle();
+  
+
+});
+
+
+
+
+
+
 
 
 
