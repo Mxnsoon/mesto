@@ -1,17 +1,16 @@
 .popup__text {
-    width: 358px;
-    font-weight: 400;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
     font-size: 14px;
-    padding-bottom: 9px;
-    line-height: 1.21;
-    color: #000000;
-    margin-bottom: 29px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
-  }
-  
-  @media (max-width: 600px) {
-    .popup__text {
-      width: 100%;
-    }
-  }
+    line-height: 30px;
+    border-style: none;
+    padding: 0;
+    border-width: 0;
+    border-color: #FFF;
+    max-width: 358px;
+    width: 100%;
+    margin-top: 30px;
+    border-bottom: 1px solid #C4C4C4;
+    padding-bottom: 5px;
+}

@@ -1,3 +1,7 @@
 .profile__all {
-    margin-right: 17px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 30px;
+    
 }

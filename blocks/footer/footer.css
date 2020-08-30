@@ -2,20 +2,18 @@
 
 .footer {
     max-width: 882px;
-    margin: 0 auto 60px;
-
+    display: flex;
+    margin: 0 auto;
 }
-@media (max-width: 900px){
+
+@media only screen and (max-width: 881px) {
     .footer {
-        max-width: 600px;
+        width: 90%;
     }
-}
+  }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 582px) {
     .footer {
-        margin: 0 19px 0;
-        padding-bottom: 36px;
         max-width: 282px;
-
     }
-}
+  }
