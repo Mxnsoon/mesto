@@ -9,7 +9,6 @@ const profName = document.querySelector('.profile__name');
 const profText = document.querySelector('.profile__text');
 const popupImage = document.querySelector('.popup-mesto');
 const popupImageCloseButton = document.querySelector('.popup-mesto__close');
-let imageFormElement = document.querySelector('.popup-mesto__content');
 const popupImg = document.querySelector('.popup-img');
 const popupImgText = popupImg.querySelector('.popup-img__name');
 const popupImgFoto = popupImg.querySelector('.popup-img__image');
