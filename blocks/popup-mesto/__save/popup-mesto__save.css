@@ -1,7 +1,4 @@
 .popup-mesto__save {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
     margin-top: 48px;
     max-width: 358px;
     width: 100%;
@@ -9,6 +6,9 @@
     background: #000000;
     border-radius: 2px;
     cursor: pointer;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
     font-size: 18px;
     line-height: 22px;
     text-align: center;    

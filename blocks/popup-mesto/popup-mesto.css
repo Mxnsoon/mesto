@@ -5,6 +5,8 @@
 @import url(./__text/popup-mesto__text.css);
 @import url(./__title/popup-mesto__title.css);
 @import url(./__save/popup-mesto__save.css);
+@import url(./__error/popup-mesto__error.css);
+@import url(./__but-disabled/popup-mesto__but-disabled.css);
 
 
 .popup-mesto {

@@ -2,7 +2,6 @@
 @import url(./__close/popup-img__close.css);
 @import url(./__image/popup-img__image.css);
 @import url(./__name/popup-img__name.css);
-@import url(./__opened/popup-img__opened.css);
 
 .popup-img {
     visibility: hidden;
