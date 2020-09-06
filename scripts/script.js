@@ -58,6 +58,8 @@ function closeWithEsc(evt) {
 }
 
 function openProfilePopup() {
+  document.querySelector('.popup__field_mesto-name').reset();
+  document.querySelector('.popup__feild_mesto-text').reset();
   popupName.value = profName.textContent;
   popupText.value = profText.textContent;
   openPopup(profilePopup);
@@ -68,7 +70,7 @@ function closeProfilePopup() {
   closePopup(profilePopup);
 }
 
-function formSubmitHandler(evt) {
+function submitFormHandler(evt) {
   evt.preventDefault();
   profName.textContent = popupName.value;
   profText.textContent = popupText.value;
@@ -140,7 +142,7 @@ function likeCard(evt) {
 
 profileOpenButton.addEventListener('click', openProfilePopup);
 profileCloseButton.addEventListener('click', closeProfilePopup);
-profSubmitButton.addEventListener('click', formSubmitHandler);
+profSubmitButton.addEventListener('click', submitFormHandler);
 openPlacePopupButton.addEventListener('click', openAddCardPopup);
 popupAddCardCloseButton.addEventListener('click', closeAddCardPopup);
 imgCloseButton.addEventListener('click', closeImgPopup);
