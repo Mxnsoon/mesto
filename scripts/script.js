@@ -58,8 +58,6 @@ function closeWithEsc(evt) {
 }
 
 function openProfilePopup() {
-  document.querySelector('.popup__field_mesto-name').reset();
-  document.querySelector('.popup__feild_mesto-text').reset();
   popupName.value = profName.textContent;
   popupText.value = profText.textContent;
   openPopup(profilePopup);
