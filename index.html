@@ -38,50 +38,41 @@
             <p class="footer__text">&copy;2020 Mesto Russia</p>
         </footer>
 
-        <div class="popup">
-            <div class="popup-container">
-                <div class="popup__close"></div>
-                <form class="popup__content form" action="#" method="POST" novalidate>
-                    <h2 class="popup__title" >Редактировать профиль</h2>
-                    <div class="popup__control">
-                        <input type="text" class="popup__name popup__input" minlength="2" maxlength="40" required>
-                        <span class="popup__error"></span>
-                        </div>
-                        <div class="popup__control">
-                        <input type="text" class="popup__text popup__input"minlength="2" maxlength="200" required> 
-                        <span class="popup__error"></span>
-                        </div>
-                    <button class="popup__save popup__but-disabled" type ="submit" disabled>Сохранить</button>
-                </form>
-            </div>
-        </div>
+    <section class="popup popup_profile">
+      <form name="popup-content" class="popup__content popup__content_profile" novalidate>Редактировать профиль
+        <div class="popup__close popup__close-button_profile" ></div>
+        <fieldset class="popup__fieldset popup__fieldset_profile">
+          <input type="text" id="popup__field_name" class="popup__field popup__field_name" minlength="2" maxlength="40" required>
+          <span span class='popup__field_error popup__field_name_error'></span>
+          <input type="text" id="popup__field_text" class="popup__field popup__field_text" minlength="2" maxlength="200" required>
+          <span span class='popup__field_error popup__field_text_error'></span>
+          <button type="submit" class="popup__save popup__save-button_profile" >Сохранить</button>
+        </fieldset>
+      </form>
+    </section>
 
-        <section class="popup-mesto">
-            <div class="popup-container">
-                <div class="popup-mesto__close"></div>
-                <form class="popup-mesto__content form" novalidate>
-                    <h2 class="popup-mesto__title">Новое место</h2>
-                    <div class="popup-mesto__control popup__control">
-                        <input type="text" class="popup-mesto__name popup__input" placeholder="Название"  minlength="1" maxlength="30" required>
-                        <span class="popup-mesto__error popup__error"></span>
-                        </div>
-                        <div class="popup-mesto__control popup__control">
-                        <input type="url" class="popup-mesto__text popup__input" placeholder="Ссылка на картинку"  required>
-                        <span class="popup-mesto__error popup__error"></span>
-                        </div>
-                    
-                    <button class="popup-mesto__save popup-mesto__but-disabled  popup__but-disabled popup__save" disabled>Создать</button>
-                </form>
-                
-            </div>
-        </section>
-        <section class="popup-img">
-            <figure class="popup-img__block">
-                <div class="popup-img__close"></div>
-                <img src="#" alt="#" class="popup-img__image">
-                <p class="popup-img__name"></p>
-                </figure>
-        </section>
+    <section class="popup popup_card">
+      <form class="popup__content popup__content_card" novalidate>Новое место
+        <div class="popup__close popup__close-button_card" ></div>
+        <fieldset class="popup__fieldset popup__fieldset_card">
+          <input type="text" id="popup__field_mesto-name" class="popup__field popup__field_mesto-name" placeholder="Название" minlength="1" maxlength="30" required>
+          <span span class='popup__field_error popup__field_mesto-name_error'></span>
+          <input type="url" id="popup__field_mesto-text" class="popup__field popup__field_mesto-text" placeholder="Ссылка на картинку" required>
+          <span span class='popup__field_error popup__field_mesto-text_error'></span>
+          <button type="submit" class="popup__save popup__save-button_card">Создать</button>
+        </fieldset>
+      </form>
+   </section>
+
+   <section class="popup popup_image">
+    <form class="popup__image">
+     <div class="popup__close popup__close-button_image"></div>
+     <figure class="element__image-content">
+     <img src="#" class="element__image-screen" alt="">
+     <p class="element__image-name"></p>
+    </figure>
+   </form>
+ </section>
     </div>
   <template class="element-template">
     <li class="element__group">
