@@ -1,6 +1,12 @@
-import { initialCards } from './initialCards.js';
-import { Card } from './Card.js';
-import { FormValidator } from './FormValidator.js';
+import {
+  initialCards
+} from './initialCards.js';
+import {
+  Card
+} from './Card.js';
+import {
+  FormValidator
+} from './FormValidator.js';
 
 const profilePopup = document.querySelector('.popup_profile');
 const profileOpenButton = document.querySelector('.profile__edit');
@@ -44,7 +50,7 @@ function addPlace(data) {
   elementList.prepend(cardElement);
 }
 
-initialCards.forEach(function(item) {
+initialCards.forEach(function (item) {
   addPlace(item);
 });
 
@@ -70,6 +76,7 @@ function openProfilePopup() {
   popupName.value = profName.textContent;
   popupText.value = profText.textContent;
   openPopup(profilePopup);
+  validProfilePopup.resetForm();
 }
 
 function closePopup(popupElement) {
@@ -107,6 +114,7 @@ function openAddCardPopup() {
   placeFormElement.value = placeFormElement.textContent;
   placeInputText.value = placeInputText.textContent;
   openPopup(popupAddCard);
+  validAddCardPopup.resetForm();
 }
 
 function closeAddCardPopup() {

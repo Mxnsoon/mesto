@@ -7,7 +7,7 @@ export class Card {
     }
 
     _getTemplate() {
-        const cardElement = document.querySelector('.element-template').content.querySelector('.element__group').cloneNode(true);
+        const cardElement = document.querySelector(this._cardTemplate).content.querySelector('.element__group').cloneNode(true);
         return cardElement;
     }
 
