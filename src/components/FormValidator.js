@@ -1,4 +1,4 @@
-export class FormValidator {
+export default class FormValidator {
 
   constructor(data, form) {
     this._formSelector = data.formSelector;
@@ -11,21 +11,21 @@ export class FormValidator {
     this._form = form;
   }
 
-  _showInputError = (inputElement, errorText) => {
+  _showInputError(inputElement, errorText){
     const errorElement = this._form.querySelector(`.${inputElement.id}_error`);
     inputElement.classList.add(this._inputErrorClass);
     errorElement.textContent = errorText;
     errorElement.classList.add(this._errorClass);
   }
 
-  _hideInputError = (inputElement) => {
+  _hideInputError(inputElement){
     const errorElement = this._form.querySelector(`.${inputElement.id}_error`);
     inputElement.classList.remove(this._inputErrorClass);
     errorElement.classList.remove(this._errorClass);
     errorElement.textContent = "";
   }
 
-  _checkInputValidity = (inputElement) => {
+  _checkInputValidity(inputElement){
     if (!inputElement.validity.valid) {
       this._showInputError(inputElement, inputElement.validationMessage);
     } else {
@@ -47,7 +47,7 @@ export class FormValidator {
     }
   }
 
-  _setEventListeners = () => {
+  _setEventListeners() {
     const inputList = Array.from(this._form.querySelectorAll(this._inputSelector));
     const buttonElement = this._form.querySelector(this._submitButtonSelector);
     this._toggleButtonState(inputList, buttonElement);
@@ -59,7 +59,7 @@ export class FormValidator {
     });
   }
 
-  resetForm = () => {
+  resetForm(){
     const inputList = Array.from(this._form.querySelectorAll(this._inputSelector));
     const buttonElement = this._form.querySelector(this._submitButtonSelector);
     inputList.forEach((inputElement) => {
@@ -68,7 +68,7 @@ export class FormValidator {
     this._toggleButtonState(inputList, buttonElement);
   }
 
-  enableValidation = () => {
+  enableValidation(){
     const formList = Array.from(this._form.querySelectorAll(this._formSelector));
     formList.forEach((formElement) => {
       formElement.addEventListener('submit', evt => {
