@@ -25,6 +25,10 @@ import {
 } from '../utils/utils.js'
 const validProfilePopup = new FormValidator(validationConfig, profileForm);
 const validMestoPopup = new FormValidator(validationConfig, mestoForm);
+
+validProfilePopup.enableValidation();
+validMestoPopup.enableValidation();
+
 const userInfo = new UserInfo('.profile__name', '.profile__text');
 
 const imagePopup = new PopupWithImage( imgPopup );
@@ -72,7 +76,6 @@ profileOpenButton.addEventListener('click', () => {
 });
 
 openPlacePopupButton.addEventListener('click', () => {
-  validMestoPopup.resetForm();
   addPopup.open();
 });
 
@@ -84,6 +87,3 @@ cardList.renderItems();
 editPopup.setEventListeners();
 addPopup.setEventListeners();
 imagePopup.setEventListeners();
-
-validProfilePopup.enableValidation();
-validMestoPopup.enableValidation();

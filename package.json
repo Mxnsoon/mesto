@@ -1,11 +1,11 @@
 {
   "name": "mesto",
   "version": "1.0.0",
-  "description": "",
+  "description": "Learning platform",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rd /s /q dist && webpack",
+    "build": "rimraf dist && webpack",
     "build:prod": "npm run build -- --mode production",
     "dev": "webpack-dev-server --open --watch"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Mxnsoon/mesto.git"
   },
-  "author": "",
+  "author": "Sergey Stepanov",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Mxnsoon/mesto/issues"
@@ -34,5 +34,8 @@
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
-  }
+  },
+  "dependencies": {
+    "core-js": "^3.6.5" 
+ } 
 }

@@ -37,11 +37,12 @@ export default class Card {
   }
 
 
-  _likeCard(evt) {
-    evt.target.classList.toggle('element__like_active');
+  _likeCard() {
+    this._element.querySelector('.element__like').classList.toggle('element__like_active');
   }
 
-  _deleteCard(evt) {
-    evt.target.closest('.element__group').remove();
+  _deleteCard() {
+    this._element.remove();
+    this._element = null;
   }
 }
