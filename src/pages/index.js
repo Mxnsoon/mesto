@@ -76,6 +76,8 @@ profileOpenButton.addEventListener('click', () => {
 });
 
 openPlacePopupButton.addEventListener('click', () => {
+
+  validMestoPopup.resetForm();
   addPopup.open();
 });
 
