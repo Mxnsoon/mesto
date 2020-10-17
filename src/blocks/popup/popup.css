@@ -14,6 +14,7 @@
 @import url(./__field/_error/popup__field_error.css);
 @import url(./__field/_error-visible/popup__field_error-visible.css);
 @import url(./__field/_type/popup__field_type_error.css);
+@import url(./__field/_avatar/popup__field_avatar.css);
 
 
 .popup {

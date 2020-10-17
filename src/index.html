@@ -15,7 +15,10 @@
         <main class="content">
             <section class="profile">
                 <div class="profile__block">
-                    <img src="./images/kusto.png" alt="Кусто" class="profile__avatar">
+                  <div class="profile__avatar-container">
+                    <img src="#" alt="Кусто" class="profile__avatar">
+                    <div class="profile__avatar-edit"></div>
+                  </div>
                     <div class="profile__info">
                         <div class="profile__all">
                             <h1 class="profile__name">Жак-Ив Кусто</h1>
@@ -63,6 +66,24 @@
       </form>
    </section>
 
+   <section class="popup popup_avatar">
+     <form class="popup__content popup__content_avatar" name="edit-avatar-form" novalidate>Обновить аватар
+       <div class="popup__close popup__close_avatar"></div>
+       <fieldset class="popup__fieldset popup__fieldset_avatar">
+         <input type="url" id="popup__field_avatar" class="popup__field popup__field_avatar" placeholder="Ссылка на картинку" required>
+         <span span class="popup__field_error popup__field_avatar_error"></span>
+         <button type="submit" class="popup__save popup__save_avatar">Сохранить</button>
+       </fieldset>
+     </form>
+   </section>
+
+   <section class="popup popup_confirmation">
+     <form class="popup__content popup__content_confirmation" novalidate>Вы уверены?
+     <div class="popup__close popup__close_confirmation"></div>
+     <button type="submit" class="popup__save popup__save_confirmation">Да</button>
+     </form>
+   </section>
+
    <section class="popup popup_image">
     <form class="popup__image">
      <div class="popup__close popup__close_image"></div>
@@ -80,7 +101,10 @@
         <img src="#" alt="#" class="element__image">
         <div class="element__all">
             <h2 class="element__text"></h2>
+            <div class="element__container">
             <button class="element__like"></button>
+            <span class="element__like-counter">1</span>
+            </div>
         </div>
     </li>
 </template>
