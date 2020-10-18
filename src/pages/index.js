@@ -41,6 +41,8 @@ const api = new Api({
   }
 });
 
+const userInfo = new UserInfo('.profile__avatar', '.profile__name', '.profile__text');
+
 Promise.all([
   api.getUserData(),
   api.getInitialCards()
@@ -54,11 +56,6 @@ Promise.all([
     name: userData.name,
     about: userData.about
   });
-
-  cardList.renderItems(cards, userId);
-})
-
-const userInfo = new UserInfo('.profile__avatar', '.profile__name', '.profile__text');
 
 const renderLoading = (button, isLoading) => {
   if (isLoading) {
@@ -108,7 +105,7 @@ const createCard = ({ name, link, likes, _id, owner }, userId) => {
 }
 
 const cardList = new Section({
-  renderer: ({ name, link, likes, _id, owner }, userId) => {
+  renderer: ({ name, link, likes, _id, owner }) => {
     const card = createCard({ name, link, likes, _id, owner }, userId);
 
     cardList.addItem(card);
@@ -135,7 +132,7 @@ const handleAvatarSubmit = () => {
     });
 
   patchAvatar.then(({ avatar, name, about }) => {
-    userInfo.setUserInfo({ avatar, name, text: about});
+    userInfo.setUserInfo({ avatar, name, about});
     editAvatarPopup.close();
   })
   .catch((err) => {
@@ -174,7 +171,7 @@ const handleMestoSubmit = () => {
     link: placeInputText.value
   });
 
-  newCard.then(({ name, link, likes, _id, owner }, userId) => {
+  newCard.then(({ name, link, likes, _id, owner }) => {
     return createCard({ name, link, likes, _id, owner }, userId);
   })
   .then(cardElement => {
@@ -188,6 +185,8 @@ const handleMestoSubmit = () => {
     renderLoading(mestoSaveButton, false);
   });
 }
+
+cardList.renderItems(cards);
 
 const imagePopup = new PopupWithImage({ popupSelector: imgPopup });
 const confirmPopup = new PopupWithConfirm({ popupSelector: popupConfirmSelector }, handleConfirmClick);
@@ -230,3 +229,10 @@ const addCardFormValidator = new FormValidator(validationConfig, mestoForm);
   editAvatarFormValidator.enableValidation();
   editProfileFormValidator.enableValidation();
   addCardFormValidator.enableValidation();
+})
+.catch((err) => {
+  console.log(err);
+})
+
+
+
