@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Sergey Stepanov">
+  <title>Mesto</title>
+<link href="main.css" rel="stylesheet"></head>
+<body>
+    <div class="page">
+        <header class="header">
+            <img src="30abf26623239580ec669deb7959ddd7.png" class="header__logo" alt="лого">
+        </header>
+        
+        <main class="content">
+            <section class="profile">
+                <div class="profile__block">
+                  <div class="profile__avatar-container">
+                    <img src="#" alt="Кусто" class="profile__avatar">
+                    <div class="profile__avatar-edit"></div>
+                  </div>
+                    <div class="profile__info">
+                        <div class="profile__all">
+                            <h1 class="profile__name">Жак-Ив Кусто</h1>
+                            <button class="profile__edit"></button>
+                        </div>
+                        <p class="profile__text">Исследователь океана</p>
+                    </div>
+                </div>
+                <button class="profile__button-add"></button>
+            </section>
+            <section class="element">
+                <ul class="element__list">
+                    
+                </ul>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__text">&copy;2020 Mesto Russia</p>
+        </footer>
+
+    <section class="popup popup_profile">
+      <form class="popup__content popup__content_profile" name="formProfile" novalidate>Редактировать профиль
+        <div class="popup__close popup__close-button_profile" ></div>
+        <fieldset class="popup__fieldset popup__fieldset_profile">
+          <input type="text" id="popup__field_name" class="popup__field popup__field_name" minlength="2" maxlength="40" required>
+          <span span class='popup__field_error popup__field_name_error'></span>
+          <input type="text" id="popup__field_text" class="popup__field popup__field_text" minlength="2" maxlength="200" required>
+          <span span class='popup__field_error popup__field_text_error'></span>
+          <button type="submit" class="popup__save popup__save-button_profile" >Сохранить</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section class="popup popup_mesto">
+      <form class="popup__content popup__content_mesto" name="formCard" novalidate>Новое место
+        <div class="popup__close popup__close_mesto" ></div>
+        <fieldset class="popup__fieldset popup__fieldset_mesto">
+          <input type="text" id="popup__field_mesto-name" class="popup__field popup__field_mesto-name" placeholder="Название" minlength="1" maxlength="30" required>
+          <span span class='popup__field_error popup__field_mesto-name_error'></span>
+          <input type="url" id="popup__field_mesto-text" class="popup__field popup__field_mesto-text" placeholder="Ссылка на картинку" required>
+          <span span class='popup__field_error popup__field_mesto-text_error'></span>
+          <button type="submit" class="popup__save popup__save_mesto">Создать</button>
+        </fieldset>
+      </form>
+   </section>
+
+   <section class="popup popup_avatar">
+     <form class="popup__content popup__content_avatar" name="edit-avatar-form" novalidate>Обновить аватар
+       <div class="popup__close popup__close_avatar"></div>
+       <fieldset class="popup__fieldset popup__fieldset_avatar">
+         <input type="url" id="popup__field_avatar" class="popup__field popup__field_avatar" placeholder="Ссылка на картинку" required>
+         <span span class="popup__field_error popup__field_avatar_error"></span>
+         <button type="submit" class="popup__save popup__save_avatar">Сохранить</button>
+       </fieldset>
+     </form>
+   </section>
+
+   <section class="popup popup_confirmation">
+     <form class="popup__content popup__content_confirmation" novalidate>Вы уверены?
+     <div class="popup__close popup__close_confirmation"></div>
+     <button type="submit" class="popup__save popup__save_confirmation">Да</button>
+     </form>
+   </section>
+
+   <section class="popup popup_image">
+    <form class="popup__image">
+     <div class="popup__close popup__close_image"></div>
+     <figure class="element__image-content">
+     <img src="#" class="element__image-screen" alt="">
+     <p class="element__image-name"></p>
+    </figure>
+   </form>
+ </section>
+    </div>
+    
+  <template class="element-template">
+    <li class="element__group">
+        <button class="element__delete"></button>
+        <img src="#" alt="#" class="element__image">
+        <div class="element__all">
+            <h2 class="element__text"></h2>
+            <div class="element__container">
+            <button class="element__like"></button>
+            <span class="element__like-counter">1</span>
+            </div>
+        </div>
+    </li>
+</template>
+
+<script src="main.js"></script></body>
+</html>
