@@ -33,8 +33,8 @@
 
 - Скачать или клонировать репозиторий
 - Установить зависимости при помощи npm `npm i`
-- Запустить в development режиме `webpack-dev-server --open --watch`
-- Запустить сборку production билда с помощью webpack'a `npm run build -- --mode production`
+- Запустить в development режиме `npm run dev`
+- Запустить сборку production билда с помощью webpack'a `npm run build:prod`
 
 
 
