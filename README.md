@@ -20,6 +20,21 @@
 ## Пакеты, которые используюстя в сборке:
 
 - [Babel core](https://github.com/babel/babel/tree/master/packages/babel-core)
+- [Babel preset](https://github.com/babel/babel-preset-env)
+- [Autoprefixer](https://github.com/postcss/autoprefixer)
+- [Babel loader](https://github.com/babel/babel-loader)
+- [Css loader](https://github.com/webpack-contrib/css-loader)
+- [Css nano](https://github.com/cssnano/cssnano)
+- [Html loader](https://github.com/webpack-contrib/html-loader)
+- [Postcss loader](https://github.com/webpack-contrib/postcss-loader)
+- [Webpack](https://github.com/webpack/webpack)
+
+## Инструкции по запуску: 
+
+- Скачать или клонировать репозиторий
+- Установить зависимости при помощи npm `npm i`
+- Запустить в development режиме `webpack-dev-server --open --watch`
+- Запустить сборку production билда с помощью webpack'a `npm run build -- --mode production`
 
 
 
