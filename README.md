@@ -19,7 +19,7 @@
 
 ## Пакеты, которые используюстя в сборке:
 
-- [Babel core] (https://github.com/babel/babel/tree/master/packages/babel-core)
+- [Babel core](https://github.com/babel/babel/tree/master/packages/babel-core)
 
 
 
